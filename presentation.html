@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Untitled Presentation</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///home/wangjianlong/apps/anaconda/lib/python2.7/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///home/wangjianlong/apps/anaconda/lib/python2.7/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///home/wangjianlong/apps/anaconda/lib/python2.7/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source:  -->
+      <div class="slide-wrapper">
+        <div class="slide slide-">
+          <div class="inner">
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="page_number">
+              /12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            
+            <section><p>title: "python爬虫入门"
+author: "王剑龙 孙瑞娜”</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h2>爬虫可以做哪些有趣的事情？</h2></header>
+            
+            
+            <section><ul>
+<li>追女神和OPPA可以用
+当你的女神或者oppa在知乎或者微博更新了消息，你是第一个知道的，而且是最快评论和关注的，那你要关注的女神是不是很感动，两人在一起是不是成功率更高一些？比如在知乎，用爬虫爬取关注对象关注的问题，给什么问题点赞了，回答了什么问题等等，一旦有更新，爬虫就可以第一时间通过邮件发送到你手机了，妈妈再也不用担心我找不到对象了。</li>
+<li>喜欢看电影的孩子有福了。
+你可以把大众点评、美团猫眼、淘宝电影、豆瓣电影的数据爬取下来，做一个简单的可视化页面后就可以及时查询：这部最新的007电影哪家电影院最便宜，以前的007系列评价如何，评分最高的电影有哪些？是不是找电影就不用几个客户端来回看了？</li>
+<li>购物就是买优惠。
+可以用爬虫爬取我爱白菜网、超值分享汇、什么值得买、惠惠购物、今日聚超值、留住你、买手党、没得比、慢慢买、牛杂网、买个便宜货、什么值得买、天上掉馅饼、一分网、折800值得买、值值值等网站的折扣信息，有自己中意的商品是不是可以很优惠的买到？</li>
+<li>金融数据随我拿。
+自己想做个量化投资什么的没有数据可不行，而新浪财经、巨潮网是不是有很多股票基金数据和财务数据，我们就可以用爬虫爬取这些财经网站的数据为自己所用，供自己分析，如果想弄得更高端一点。还可以抓取所有新闻网站的财经新闻，做个文本挖掘，将最火最热的题材给最新挖掘出来。或者将新浪微博等社交网站的数据抓下来，分析大众的关注热点和情绪倾向，做个股票预测的可不可以？</li>
+<li>好工作来找我。
+现在什么工作最赚钱，最近的工作形势怎么样？是不是可以把一大堆招聘网站的招聘数据抓下来，然后做个对比分析？
+这种基于大量数据的分析才不会让你不见树木不见森林。好工作随你找。</li>
+</ul>
+<h2>除了上面的小应用以外，爬虫还有好多好多用处，只要你脑洞大开，什么的都可以做做。说这么多，只是想说明一点，爬虫在我们生活中很有用！</h2>
+<h2>浏览网页</h2>
+<p>爬虫抓取网页的过程其实和咱们平时使用浏览器浏览网页的道理是一样的。</p>
+<ul>
+<li>浏览器的地址栏中输入地址，比如<strong>www.baidu.com</strong>;</li>
+<li>浏览器会查找域名对应的IP地址，向IP对应的服务器发送请求;</li>
+<li>百度那边的服务器响应请求，发回网页内容(html代码);</li>
+<li>浏览器解析网页内容,然后将原始的代码转变成我们直接看到的网站页面。</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h2>爬虫介绍</h2></header>
+            
+            
+            <section><p>爬虫就是用计算机代码实现模拟浏览器的功能，给定url，将请求的html下载下来，这个过程就是抓<strong>数据</strong>，而不需要人工参与。
+学习python网络爬虫主要分3个大的版块：抓取，分析，存储
+- firebug </p>
+<ol>
+<li>爬虫必备神器  </li>
+<li>抓取 ( requests库)</li>
+<li>get(headers)</li>
+<li>post(模拟登入、和cookies)</li>
+<li>模拟浏览器(selenium)#看时间</li>
+<li>html解析</li>
+<li>BeautifulSoup解析 得到结构化数据</li>
+<li>存储</li>
+<li>文本、数据框 (pandas)保存为csv、txt比较多</li>
+<li>图片、pdf、视频保存（requests)</li>
+<li>存入到数据库中</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h2>爬虫小助手firebug</h2></header>
+            
+            
+            <section><ol>
+<li>展示firebug :chrome safari 有类似的工具存在 右键 看看有没有审查元素 </li>
+<li>Firebug如同一把精巧的瑞士军刀，从各个不同的角度剖析Web页面内部的细节层面,我们可以利用它提高我们写爬虫的效率。怎么剖析待会结合实例讲。</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h2>抓取之get方法（一）</h2></header>
+            
+            
+            <section><p>抓取就是刚才说的向服务器发送请求并得到网页内容的一个过程。
+请求的方法有主要有两种get和post:</p>
+<ol>
+<li>get 方法就是你向服务器请求网页内容，服务器把网页内容发给你</li>
+<li>我们用requests get两个网页试一试</li>
+<li>为什么大众点评的get不到？</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h2>抓取之get方法（二）</h2></header>
+            
+            
+            <section><p>大众点评网站不返回请求的网页内容，其实这涉及到http请求头。
+- 利用firebug查看： host user-agent Cookie
+在防爬虫层面，通常是可以从这里区别你是爬虫还是正常用户。如果你没有请求头,会拒绝给你发送信息。
+- 定制请求头，伪装成浏览器。
+利用firebug查看请求头信息，然后自己用python字典的格式模仿即可。
+- 状态码 （http相应状态)
+1. 成功（2字头）：200 OK
+2. 请求错误（4字头）：403 Forbidden（服务器理解但是拒绝) 404 Not Found (请求失败，要么失败要么服务器没有该资源）
+- 其他请求类或库
+1. python自带：urllib2、urllib3
+2. pycurl urllib3 RoboBrowser</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h2>抓取之post方法</h2></header>
+            
+            
+            <section><p>get方法能请求大部分简单的网站了，但是有些网站需要浏览器发送数据给服务器才能发送信息。
+比如登入网页等。</p>
+<ol>
+<li>firebug查看 </li>
+<li>模拟登入脉脉</li>
+<li>保持登入
+那是不是请求一个网页就得post呢，当然不是了。
+当你post方法登入以后，服务器会返回给你cookie,也就是身份信息了。得到这个东西说明可以认为是特定用户在浏览，我们在header中加入cookie,就不需要每次很麻烦的post了。</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h2>html代码解析之解析包介绍</h2></header>
+            
+            
+            <section><p>我们会发现网页返还给我们的一大堆东西，不管对我们有用没用，全给你了。而我们根据需求只要特定内容，而且希望得到结构化的数据，也就是整理的好好的数据。这样看起来才不累。这时候就需要我们的解析工具登场了。
+- 解析包介绍</p>
+<ol>
+<li>BeautifulSoup ：支持css 正则表达式 ，非常人性化的一个包，简单好用 。但是纯python 实现的 ，解析效率稍微弱一些。一般情况够用</li>
+<li>lxml包：支持xpath 语法 ，用C语言写的 非常高效。学习xpath 语法可以 去[w3school ]（http://www.w3school.com.cn/），免费的web技术教程网站 ，那里还有htmi xml javasccript 等语言的介绍，我没事常会去学习会。</li>
+<li>pyquery 支持jquery选择器</li>
+<li>cssselect   支持css选择器 </li>
+<li>re (正则表达式)  当然也可以使用python 自带的re 正则表达式模块 ，小型爬虫还好，写多了会有点崩溃。当上述方式得不到数据的时候可以结合正则表达式。
+总之，应根据自己需求选择解析包即可，没有绝对的好坏。初学者建议使用BeautifulSoup 因为好学容易上手。
+ 下面的讲解主要基于，这里主要用到BeautifulSoup4的解析包。</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h2>BeautifulSoup4解析</h2></header>
+            
+            
+            <section><p>还是拿大众点评来进行讲解
+- find 
+- find_all </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h2>存储</h2></header>
+            
+            
+            <section><ul>
+<li>文本类型
+根据自己需要进行选择了，小批量的数据我们可以保存在电脑硬盘里，文本的我们可以保存为txt、数据框的可以保存为txt、csv， 比如单个店面评论的数据。</li>
+<li>图片、pdf、视频
+这些数据请求有点不同。requests的官方文档里会有介绍，大家有需要可以查询，因为时间关系，这里就不介绍了。</li>
+<li>数据库存储
+这里指的是把抓来的数据直接放到数据库里，如Mysql。这里的内容大家有需要根据自己情况现学就行。</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+            
+            <header><h2>防爬虫机制</h2></header>
+            
+            
+            <section><p>大数据时代，数据就是一个公司的核心资产。你想抓数据，那边公司肯定会千方百计的设计防爬虫的机制。你有机制，我有机智。把刚才涉及的伪装浏览器的东西总结下，再加上一些需要注意的地方。
+- header 
+http请求头信息伪装,这个还是比较容易的，用firebug就可以查询到。
+- cookie 
+个人身份信息。刚才也讲到了，也可以用firebug获取，加入到header里面
+- time 
+如果你爬取速度太快，且好多爬虫同时进行，也就是多线程时，会给对方服务器造成巨大压力，甚至造成瘫痪，所以，很多公司会对爬取速度做出限定。因为正常人不会访问速度不会这么快和频繁。你需要每抓取一个页面，然后等待几秒钟。
+-  利用javascript(js)加密网页内容
+有些数据是动态变化的，它不会把所有的数据一下子加载到网页里，有的需要点击一下才能出现，这时候很多爬虫就束手无策了。
+有两种解决方案，一种是调用浏览器去点击它，比如selenium ,它主要用来做自动化测试的，但是也可以用来抓数据，待会会演示。但由于调用浏览器占内存，对性能要求较高。另一种就是封装个无界面浏览器，如phantomjs,执行js代码进行抓取。
+- 验证码
+你浏览次数过多或很频繁，就会跑出验证码，爬虫一般识别不了，多次输入错误，你的IP就会被封了。一种方法是人工填写，一种方法就是抓取大量验证码，然后利用机器学习中数字识别的算法就行判别，这个要求就很高了。
+还有好多，比如内容放到图片里，不让你抓。 </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: speak.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h2>大众点评评论数据抓取</h2></header>
+            
+            
+            <section><p>讲了这么多，大家也听得有点累了，结合今天我们所学的，我们来写个抓取大众点评网某家店铺的评论数据。
+因为代码已经写好了，我就直接讲解。</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="speak.md">speak.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">-</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">爬虫可以做哪些有趣的事情？</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">爬虫介绍</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">爬虫小助手firebug</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">抓取之get方法（一）</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">抓取之get方法（二）</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">抓取之post方法</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">html代码解析之解析包介绍</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">BeautifulSoup4解析</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">存储</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">防爬虫机制</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">大众点评评论数据抓取</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
