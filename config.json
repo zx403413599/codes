@@ -1,0 +1,6 @@
+{
+  "taskdb": "sqlalchemy+postgresql+taskdb://postgres:wszgrwhja1@10.1.36.183:5432/taskdb",
+  "projectdb": "sqlalchemy+postgresql+projectdb://postgres:wszgrwhja1@10.1.36.183:5432/projectdb",
+  "resultdb": "sqlalchemy+postgresql+resultdb://postgres:wszgrwhja1@10.1.36.183:5432/resultdb",
+  "webui":{"port":5000}
+}
